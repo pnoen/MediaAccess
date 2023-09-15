@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/recordVideo"
+            android:text="Record Video"
+            android:onClick="onRecordVideoClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/recordVideo"
+            android:id="@+id/loadVideo"
+            android:text="Load Video"
+            android:onClick="onLoadVideoClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/loadVideo"
+            android:id="@+id/takePhoto"
+            android:text="Take Photo"
+            android:onClick="onTakePhotoClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/takePhoto"
+            android:id="@+id/loadPhoto"
+            android:text="Load Photo"
+            android:onClick="onLoadPhotoClick"/>
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/loadPhoto"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_above="@id/loadPhoto"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

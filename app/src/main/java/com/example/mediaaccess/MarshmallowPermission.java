@@ -74,4 +74,15 @@ public class MarshmallowPermission {
         }
     }
 
+    public boolean checkPermissionForLocation() {
+        int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION);
+        return result == PackageManager.PERMISSION_GRANTED;
+    }
+
+    public void requestPermissionForCameraAndLocation() {
+        ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_FINE_LOCATION},
+                CAMERA_PERMISSION_REQUEST_CODE);
+    }
+
 }
